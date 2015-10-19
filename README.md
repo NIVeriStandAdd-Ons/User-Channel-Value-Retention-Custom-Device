@@ -4,6 +4,16 @@ The are scenarios in which it can be necessary to retain system values across an
 
 ### LabVIEW Version ###
 
+[10/19/2015 VincentRuault]
+- Source code migrated to LV-2014.
+- Changed internal code:
+	** Default values for User-channel not saved at each change. Default values saved at the end (when receiving "Stop" event).
+	** changed timeout value from 10 ms to 100 ms to minimize CPU usage because of this tool.
+- Limited testing :
+	** Test with engine running on Windows. Only 2 scenarios validated (empty Sysdef file with only 05 User-channels): first is from NIVS getting started window, use Run options. Second is when we deploy and undeploy from System-Explorer Windows.
+	** Test with engine running on cRIO PharLap. Only 2 scenarios validated (empty Sysdef file with only 05 User-channels): first is from NIVS getting started window, use Run options. Second is when we deploy and undeploy from System-Explorer Windows.
+
+[First Version]
 This Add-On was developed using LabVIEW 2012
 
 ### Built Availability ###
