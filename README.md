@@ -1,3 +1,7 @@
+## Deprecated!!##
+
+This add-on has been deprecated. The Channel Value Retention Service (https://github.com/NIVeriStandAdd-Ons/Channel-Value-Retention-Service) is recommended for new systems.
+
 ## User Channel Value Retention Custom Workspace Object ##
 
 The are scenarios in which it can be necessary to retain system values across an un-deploy and re-deploy of the System Definition file. For example, lets say you're using a user channel to count the test cycles of an ECU and you're incrementing this value. Sometime through your test, you realize you need to un-deploy the system to change an alarm value. So, you un-deploy, make your changes, and redeploy. But your user channels (and all others for that matter) will return to their default values and we're running a long-term test so we want to continue counting cycles from where we left off. This workspace tool allows your User Channels to be re-deployed with the value they had when the system was un-deployed (assuming the workspace was open). The workspace object monitors user selected User Channels and sets their default values in the host side copy of the System Definition file so when the system is redeployed it uses these new values.   
